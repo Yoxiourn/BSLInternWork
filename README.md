@@ -1,14 +1,14 @@
-# Overview
+## Overview
 
 Hi! I'm Matthew and I was recently involved in the UQ AI Collaboratory under the supervision of Dr Jessica Korte. I've created this repository so that you can see my work for the Sign Segmentation part of my internship.
 
 Renz (who's work you can see here: https://github.com/RenzKa/sign-segmentation) created an I3D + MS-TCN model to predict segments between signs in the context of BSL. Since her worked seemed promising, I decided to try this in the context of Auslan sign language. To test this, I cloned her repository and set up the environment, fed Auslan videos into her model which produced a ```predictions.pkl``` file (which is a binary labelled list of frames), and then ran my ```ELANmain.py``` file to create a binary labelled sign segment list of frames for the corresponding Auslan video to test the accuracy of her model's predictions.
 
-# My Work
+## My Work
 
 The work I developed for this part of my internship can be seen in the ```ELANmain.py``` file, which shows how I pulled the annotations from the ```.eaf``` file using pympi, how I counted and setup the list of frames using cv2 for the specific Auslan video, and how I labelled these frames using the annotations pulled from the ```.eaf``` file to find the frames where there were pauses/segments between signs, which would have the frame labelled as a '1', and the frames where there was a sign being performed, which would have the frame labelled as a '0', and finally, with this labelled list of frames generated from the ```.eaf``` file, you can see how I compared the ```predictions.pkl``` binary labels to the ```.eaf``` generated labels, and how I calculated the evaluation metrics.
 
-# Running My Work and Output
+## Running My Work and Output
 
 To run this file, I've provided a sample ```predictions.pkl``` file and a ```.eaf``` file. Unfortunately, you would also need to have the video, which I no longer have (although you might be able to find if you have permission to the database from Dr Jessica Korte, the name is the same as the ```.eaf``` name. Make sure to change the directories used in ```ELANmain.py``` to suit you). However, I don't think you need to run this file in order to understand and learn from the code, namely how I pulled the annotations from the ```.eaf``` file, and any other parts of my code you might find interesting. I do have an output I saved from a while ago, so you can see what the output of my code looks like below if you're interested (note that each line of the below output corresponds to each print() in the ```ELANmain.py``` file, i.e, the first line is the first print() and so forth):
 
@@ -129,10 +129,10 @@ Recall: 0.5714285714285714
 F1 Score: 0.25
 ```
 
-# I3D + MS-TCN implementation
+## I3D + MS-TCN implementation
 As mentioned, I fed the Auslan videos into Renz's models to generate the ```predictions.pkl``` files and test the accuracy of her model in an Auslan context. If you are interested in the I3D + MS-TCN implementation, I'd encourage you to read through Renz's repository: https://github.com/RenzKa/sign-segmentation. I've opted to not include this here since Renz does a very good job at explaining the work (and I'd just be copying her repository), so you should go there if you want to see more about the implementation of the I3D + MS-TCN model.
 
-# Versions
+## Versions
 The list of versions for the python interpreter and libraries can be seen below:
 
 - python 3.10.1
