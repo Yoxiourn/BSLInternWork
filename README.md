@@ -8,7 +8,7 @@ Renz (who's work you can see here: https://github.com/RenzKa/sign-segmentation) 
 
 The work I developed for this part of my internship can be seen in the ```ELANmain.py``` file, which shows how I pulled the annotations from the ```.eaf``` file using pympi, how I counted and setup the list of frames using cv2 for the specific Auslan video, and how I labelled these frames using the annotations pulled from the ```.eaf``` file to find the frames where there were pauses/segments between signs, which would have the frame labelled as a '1', and the frames where there was a sign being performed, which would have the frame labelled as a '0', and finally, with this labelled list of frames generated from the ```.eaf``` file, you can see how I compared the ```predictions.pkl``` binary labels to the ```.eaf``` generated labels, and how I calculated the evaluation metrics.
 
-# Running my work
+# Running the ```ELANmain.py``` file and output
 
 To run this file, I've provided a sample ```predictions.pkl``` file and a ```.eaf``` file. Unfortunately, you would also need to have the video, which I no longer have (although you might be able to find if you have permission to the database from Dr Jessica Korte). However, I don't think you need to run this file in order to understand and learn from the code, namely how I pulled the annotations from the ```.eaf``` file, and any other parts of my code you might find interesting. I do have an output I saved from a while ago, so you can see what the output of my code looks like below if you're interested (note that each line of the below output corresponds to each print() in the ```ELANmain.py``` file, i.e, the first line is the first print() and so forth):
 
@@ -137,6 +137,6 @@ If you are interested in the I3D + MS-TCN implementation, I'd encourage you to r
 The list of versions for the python interpreter and libraries can be seen below:
 
 - python 3.10.1
-- pympi-ling
-- opencv-python  (for the import cv2)
-- pandas
+- pympi-ling 1.70.2
+- opencv-python 4.6.0.66 (for the import cv2)
+- pandas 1.4.4
