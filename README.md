@@ -130,10 +130,9 @@ F1 Score: 0.25
 ```
 
 # I3D + MS-TCN implementation
-If you are interested in the I3D + MS-TCN implementation, I'd encourage you to read through Renz's repository: https://github.com/RenzKa/sign-segmentation. I've opted to not include this here since Renz does a very good job at explaining the work (and I'd just be copying her repository), so you should go there if you want to see more about the implementation of the I3D + MS-TCN model.
+As mentioned, I fed the Auslan videos into Renz's models to generate the ```predictions.pkl``` files and test the accuracy of her model in an Auslan context. If you are interested in the I3D + MS-TCN implementation, I'd encourage you to read through Renz's repository: https://github.com/RenzKa/sign-segmentation. I've opted to not include this here since Renz does a very good job at explaining the work (and I'd just be copying her repository), so you should go there if you want to see more about the implementation of the I3D + MS-TCN model.
 
 # Versions
-
 The list of versions for the python interpreter and libraries can be seen below:
 
 - python 3.10.1
